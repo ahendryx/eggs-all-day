@@ -1,12 +1,35 @@
 <template>
 <div>
   <h1>How to Cook an Egg: 4 Methods</h1>
+  <p class="intro-secondary">There are a number of ways you can cook eggs, but here we look at 4 of the most popular methods. Don’t want to cook your eggs separately? Try one of these recipes that use raw eggs as either part of a sauce (Spaghetti Carbonara, Kimchi Noodles), or cook the eggs right in a sauce (Eggs in Purgatory*, Green Shakshuka). (Add here or make another section?)
+* Shortcut: Skip making your own tomato sauce and use a good jarred sauce. Rao’s Arrabiata is my personal favorite.</p>
   <section>
     <div class="cooking-method" v-for="technique in techniques" v-bind:key="technique.title">
       <image-custom :imageName="technique.img"></image-custom>
+
       <h3>{{technique.title}}</h3>
+      <!-- Steps to method -->
       <p>{{technique.contentA}}</p>
       <p>{{technique.contentB}}</p>
+      <p>{{technique.contentC}}</p>
+      <!-- Link to instruction source -->
+      <p>
+        <small><b>SOURCE:</b></small><br>
+        <a id="content-link" :href="url">{{technique.linkA}}</a>
+      </p>
+
+      <!-- Any additional tips or info -->
+      <p>{{technique.contentD}}</p>
+      <p>{{technique.contentE}}</p>
+      <!-- Link for more info if needed -->
+      <p><a id="content-link" :href="url">{{technique.linkB}}</a></p>
+
+      <!-- Three suggested recipes for this method -->
+      <h4>{{technique.contentF}}</h4>
+      <p><a id="content-link" :href="url">{{technique.linkC}}</a></p>
+      <p><a id="content-link" :href="url">{{technique.linkD}}</a></p>
+      <p><a id="content-link" :href="url">{{technique.linkE}}</a></p>
+
     </div>
   </section>
 </div>
@@ -27,49 +50,37 @@ export default {
         {title: "BOILED",
           img: 'hard-boiled.jpg',
           // Use a backslash after lines of text so Javascript knows the string is continued; otherwise, errors occur
-          contentA: "Step 1: Bring a large saucepan of water to a boil over medium-high heat. Using a slotted spoon, \
-          carefully lower 4–8 eggs into water one at a time. Cook 10 minutes, maintaining a gentle boil. Carefully \
-          transfer eggs to a bowl of ice water and let cool until just slightly warm, about 2 minutes. Step 2: Gently \
-          crack eggs all over and peel, starting from the wider end containing the air pocket. Step 3: Do Ahead: Eggs \
-          can be cooked and peeled 3 days ahead. Transfer to an airtight container and chill.",
-          contentB: "Sit amet luctus venenatis lectus magna fringilla urna porttitor. Habitasse \
-          platea dictumst quisque sagittis purus sit amet volutpat. Gravida rutrum quisque non tellus \
-          orci ac auctor. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Ultrices eros \
-          in cursus turpis massa. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Sed \
-          blandit libero volutpat sed cras ornare arcu. Massa placerat duis ultricies lacus sed. \
-          Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Aliquet lectus proin nibh \
-          nisl condimentum id venenatis a. Suspendisse potenti nullam ac tortor vitae purus faucibus \
-          ornare. Sodales ut eu sem integer vitae justo eget. Maecenas volutpat blandit aliquam etiam \
-          erat velit. Odio ut sem nulla pharetra diam. Duis at tellus at urna. Tempor orci dapibus \
-          ultrices in iaculis nunc sed augue lacus. Hac habitasse platea dictumst quisque sagittis \
-          purus sit. Arcu dictum varius duis at consectetur lorem donec. Adipiscing diam donec \
-          adipiscing tristique risus nec feugiat in. Eu turpis egestas pretium aenean pharetra magna \
-          ac placerat.",
+          contentA: "STEP 1: Bring a large saucepan of water to a boil over medium-high heat. Using a slotted spoon, \
+          carefully lower 4–8 eggs into water one at a time. Maintaining a gentle boil, cook 10 minutes for hard-boiled eggs \
+          and 6 1/2 minutes for soft-boiled. Carefully transfer eggs to a bowl of ice water and let cool until just slightly warm, \
+          about 2 minutes.",
+          contentB: "STEP 2: Gently crack eggs all over and peel, starting from the wider end containing the air pocket.",
+          contentC: "DO AHEAD: Eggs can be cooked and peeled 3 days ahead. Transfer to an airtight container and chill.",
+          linkA: ('https://www.bonappetit.com/recipe/hard-boiled-eggs'),
+          contentD: "TIP: For this method, use eggs that are a little older rather than fresh ones. This will make \
+          them much easier to peel without damaging the egg white. You can see more about by visiting the link below.",
+          linkB: ('https://www.thekitchn.com/5-mistakes-to-avoid-when-making-hard-boiled-eggs-cooking-mistakes-to-avoid-216999'),
+          contentF: "RECIPE SUGGESTIONS FOR THIS METHOD",
+          linkC: ('https://www.epicurious.com/recipes/food/views/deviled-eggs-106562'),
+          linkD: ('https://www.foodnetwork.com/recipes/robert-irvine/scotch-eggs-with-mustard-sauce-2268828'),
+          linkE: ('https://www.marthastewart.com/314646/classic-egg-salad')
           },
           {title: "SCRAMBLED",
           img: 'scrambled.jpg',
-          contentA: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
-          tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod.\
-          Maecenas sed enim ut sem viverra aliquet eget sit amet. Libero volutpat sed cras ornare \
-          arcu dui vivamus arcu. Egestas sed sed risus pretium quam vulputate dignissim. Leo urna \
-          molestie at elementum eu facilisis sed. In aliquam sem fringilla ut morbi tincidunt augue. \
-          Egestas diam in arcu cursus euismod quis viverra. Ut eu sem integer vitae. Arcu ac tortor \
-          dignissim convallis aenean. At elementum eu facilisis sed odio morbi quis commodo. \
-          Fringilla ut morbi tincidunt augue interdum velit euismod. Aliquam ultrices sagittis orci \
-          a scelerisque purus semper eget duis.",
-          contentB: "Sit amet luctus venenatis lectus magna fringilla urna porttitor. Habitasse \
-          platea dictumst quisque sagittis purus sit amet volutpat. Gravida rutrum quisque non tellus \
-          orci ac auctor. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Ultrices eros \
-          in cursus turpis massa. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Sed \
-          blandit libero volutpat sed cras ornare arcu. Massa placerat duis ultricies lacus sed. \
-          Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Aliquet lectus proin nibh \
-          nisl condimentum id venenatis a. Suspendisse potenti nullam ac tortor vitae purus faucibus \
-          ornare. Sodales ut eu sem integer vitae justo eget. Maecenas volutpat blandit aliquam etiam \
-          erat velit. Odio ut sem nulla pharetra diam. Duis at tellus at urna. Tempor orci dapibus \
-          ultrices in iaculis nunc sed augue lacus. Hac habitasse platea dictumst quisque sagittis \
-          purus sit. Arcu dictum varius duis at consectetur lorem donec. Adipiscing diam donec \
-          adipiscing tristique risus nec feugiat in. Eu turpis egestas pretium aenean pharetra magna \
-          ac placerat.",
+          contentA: "STEP 1: Crack 2 eggs into a bowl and season with salt and pepper. Lightly beat with a fork until the \
+          yolks and whites are combined.",
+          contentB: "STEP 2: Heat a frying pan over a medium heat. Melt a teaspoon of butter in the pan, tilting and swirling \
+          around so the base and most of the sides are covered. When the butter starts to foam, pour in the eggs and stir immediately \
+          with a wooden spoon. Keep stirring gently as they cook to break up the egg and help it to scramble. This should \
+          take 3–5 minutes.",
+          contentC: "STEP 3: When the egg is nearly cooked, remove from the heat and stir in another teaspoon of butter. \
+          The eggs will continue to cook in the residual heat of the pan to produce a smooth and creamy finish. Serve \
+          immediately.",
+          linkA: ('https://www.bbc.co.uk/food/recipes/how_to_make_scrambled_93136'),
+          contentF: "RECIPE SUGGESTIONS FOR THIS METHOD",
+          linkC: ('https://www.thekitchn.com/how-to-make-a-french-omelette-cooking-lessons-from-the-kitchn-206018#post-recipe-9327'),
+          linkD: ('https://www.latimes.com/recipe/new-mex-migas'),
+          linkE: ('https://www.marthastewart.com/314646/classic-egg-salad')
           },
           { title: "FRIED",
           img: 'overeasy.jpg',
@@ -136,20 +147,30 @@ export default {
 
 
 <style lang="scss">
+@import '../assets/css/settings.variables';
 
 section {
   display: flex;
   flex-flow: row wrap;
   .cooking-method {
-    flex: 40%;
+    flex: 30%;
     margin: 0 2em 3em 0;
   }
 }
+
+#content-link {
+  cursor: pointer;
+  font-weight: bolder;
+  border: none;
+  text-decoration: none;
+}
+
 
 /* Adding a media query for mobile */
 @media screen and (max-width: 576px) {
   section {
     flex-flow: column wrap;
+    flex: 80%;
   }
 }
 

@@ -3,7 +3,7 @@
     <nuxt-link to="/">HOME</nuxt-link>
     <nuxt-link to="/how-to">HOW TO</nuxt-link>
     <nuxt-link to="/know-your-egg">KNOW YOUR EGG</nuxt-link>
-    <nuxt-link to="/recipe-search">RECIPE SEARCH</nuxt-link>
+    <nuxt-link to="/recipes">RECIPES</nuxt-link>
   </div>
 </template>
 

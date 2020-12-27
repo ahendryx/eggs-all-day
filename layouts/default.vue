@@ -41,19 +41,19 @@ html {
 body {
   font-family: 'Barlow', sans-serif;
   font-family: 'Barlow Condensed', sans-serif;
-  width: 85%;
+  width: 90%;
   height: 100%;
   margin: 1em 0 0 2em;
 }
 
-header, h1, h2, h3 {
+header, h1, h2, h3, h4 {
   font-family: 'Barlow Condensed', sans-serif;
 }
 
 h1 {
   font-family: 'Barlow', sans-serif;
   font-size: 2.7em;
-  padding: 0.5em 0 0.8em 0;
+  padding-top: 0.5em;
 }
 
 h2 {
@@ -62,7 +62,15 @@ h2 {
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 0.9em;
+  font-weight: 600;
+  border-top: 1px dotted $dkgray;
+  padding-top: 0.5em;
+  margin-top: 2em;
 }
 
 .bkgrd-img {
@@ -76,7 +84,7 @@ h3 {
   position: absolute;
   width: 40%;
   top: 50%;
-  left: 45%;
+  left: 50%;
   transform: translate(-50%, -50%);
   p {
     font-size: 1.3em;
@@ -86,9 +94,16 @@ h3 {
   }
 }
 
+.intro-secondary {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.2em;
+  padding: 0 0 2.3em 0;
+}
+
 p {
   font-family: 'Barlow', sans-serif;
   font-size: 0.9em;
+  line-height: 1.5em;
 }
 
 footer {

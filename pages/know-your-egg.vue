@@ -1,7 +1,7 @@
 <template>
-<div class="row pb-5">
-  <h1 class="col-12 pt-5 pb-2">Know Your Egg</h1>
-  <p class="lead col-12 pb-5">What do all those carton labels really mean? Click on each term for an explanation.</p>
+<div>
+  <h1>Know Your Egg</h1>
+  <p class="intro-secondary">What do all those carton labels really mean? Click on each term for an explanation.</p>
   <!-- Adding accordion -->
   <div id="accordion" class="col-lg-10 col-md-10 col-sm-12">
 
@@ -118,3 +118,10 @@ export default {
   }
 }
 </script>
+
+
+
+<style>
+
+
+</style>
