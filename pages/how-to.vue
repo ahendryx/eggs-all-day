@@ -67,8 +67,8 @@ export default {
           contentF: "RECIPE SUGGESTIONS FOR THIS METHOD",
           linkCCopy: "Deviled Eggs",
           linkC: ('https://www.epicurious.com/recipes/food/views/deviled-eggs-106562'),
-          linkDCopy: "Scotch Eggs with Mustard Sauce",
-          linkD: ('https://www.foodnetwork.com/recipes/robert-irvine/scotch-eggs-with-mustard-sauce-2268828'),
+          linkDCopy: "Jammy Eggs with Paprika Aioli",
+          linkD: ('https://www.bonappetit.com/recipe/jammy-eggs-with-paprika-aioli'),
           linkECopy: "Classic Egg Salad",
           linkE: ('https://www.marthastewart.com/314646/classic-egg-salad')
           },
@@ -160,7 +160,7 @@ section {
   display: flex;
   flex-flow: row wrap;
   .cooking-method {
-    flex: 30%;
+    flex: 40%;
     margin: 0 2em 3em 0;
   }
 }

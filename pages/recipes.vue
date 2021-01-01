@@ -2,7 +2,7 @@
 <div class="row pb-5">
   <h1 class="col-12 pt-5 pb-2">Recipes</h1>
   <p class="lead col-12 pb-5">Below are a few more ideas for how to use eggs in your meals.</p>
-    <section class="container" v-if="recipes">
+    <section class="lead col-12 pb-5" v-if="recipes">
         <recipeCard
           v-for="recipe of recipes"
           :key="recipe.id"
@@ -30,7 +30,7 @@ export default {
   },
   mounted () {
   axios
-    .get('https://api.spoonacular.com/food/site/search?query=egg&apiKey=9993c358fa9747c1a541121a6fda81c3')
+    .get('https://api.spoonacular.com/food/site/search?query=eggs&apiKey=9993c358fa9747c1a541121a6fda81c3')
     .then(response => (this.recipes = response.data.Recipes))
     .catch(error => {
       console.log(error)
