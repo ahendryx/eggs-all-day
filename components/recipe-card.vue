@@ -1,8 +1,8 @@
 <template>
  <article class="card">
 	 <img :src="recipe.image" :alt="recipe.name" class="card__img">
-	 <h2 class="card__title">{{ recipe.title }}</h2>
-	<!-- <a :href="url">{{ recipe.sourceUrl }}</a> -->
+	 <a :href="recipe.link"><h2 class="card__title">{{ recipe.name }}</h2></a>
+   <p class="card__info">{{recipe.dataPoints[2].value}}</p>
  </article>
 </template>
 
@@ -17,22 +17,24 @@ export default {
 
 
 <style lang="scss">
+
 .card {
-	margin: 1rem;
-	border: 1px solid #000;
-	padding: 1.5rem;
-	max-width: 200px;
-	min-height: 200px;
+	border: none;
+  max-width: 300px;
+  margin: 0 1em 2em 0;
 	&__img {
 		display: block;
-		margin-bottom: 1rem;
+		margin-bottom: 0.2rem;
 	}
 	&__title {
-		font-size: 1rem;
-		margin-bottom: .25rem;
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
 	}
-	&__copy {
-		font-size: .875rem;
-	}
+  &__info {
+    font-size: 0.8em;
+    font-style: italic;
+    padding-top: 0.3em;
+  }
 }
+
 </style>

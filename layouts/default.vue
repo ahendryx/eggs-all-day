@@ -63,6 +63,7 @@ h2 {
 
 h3 {
   font-size: 1.2em;
+  padding-top: 2em;
 }
 
 h4 {

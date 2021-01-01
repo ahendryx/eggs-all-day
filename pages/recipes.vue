@@ -1,7 +1,7 @@
 <template>
-<div>
-  <h1>Recipes</h1>
-  <p class="intro-secondary">Below are a few more ideas for how to use eggs in your meals.</p>
+<div class="row pb-5">
+  <h1 class="col-12 pt-5 pb-2">Recipes</h1>
+  <p class="lead col-12 pb-5">Below are a few more ideas for how to use eggs in your meals.</p>
     <section class="container" v-if="recipes">
         <recipeCard
           v-for="recipe of recipes"
@@ -15,11 +15,11 @@
 
 <script>
 import axios from 'axios';
-import RecipeCard from '../components/recipe-card.vue';
+import recipeCard from '../components/recipe-card.vue';
 
 export default {
   components: {
-    RecipeCard
+    recipeCard
   },
   data() {
     return {
@@ -30,8 +30,8 @@ export default {
   },
   mounted () {
   axios
-    .get('https://api.spoonacular.com/recipes/complexSearch?apiKey=35efc00cf12a4c608abe2b2839b6747e&query=eggs&type=mainCourse&number=2&includeInstruction=true')
-    .then(response => (this.recipes = response.data))
+    .get('https://api.spoonacular.com/food/site/search?query=egg&apiKey=9993c358fa9747c1a541121a6fda81c3')
+    .then(response => (this.recipes = response.data.Recipes))
     .catch(error => {
       console.log(error)
       this.errored = true
@@ -39,5 +39,9 @@ export default {
     .finally(() => this.loading = false)
   }
 }
+
+//console.log(response)
+//https://api.spoonacular.com/recipes/complexSearch?query=eggs&apiKey=35efc00cf12a4c608abe2b2839b6747e&number=10&type=mainCourse&instructionsRequired=true
+
 
 </script>

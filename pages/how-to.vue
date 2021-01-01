@@ -1,8 +1,10 @@
 <template>
-<div>
-  <h1>How to Cook an Egg: 4 Methods</h1>
-  <p class="intro-secondary">There are a number of ways you can cook eggs, but here we look at 4 of the most popular methods. Don’t want to cook your eggs separately? Try one of these recipes that use raw eggs as either part of a sauce (Spaghetti Carbonara, Kimchi Noodles), or cook the eggs right in a sauce (Eggs in Purgatory*, Green Shakshuka). (Add here or make another section?)
-* Shortcut: Skip making your own tomato sauce and use a good jarred sauce. Rao’s Arrabiata is my personal favorite.</p>
+<div class="row pb-5">
+  <h1 class="col-12 pt-5 pb-2">How to Cook an Egg: 4 Methods</h1>
+  <p class="lead col-12 pb-5">There are a number of ways you can cook eggs, but here we look at 4 of the most popular methods.
+    Don’t want to cook your eggs separately? Try one of these recipes that use raw eggs as either part of a sauce
+    (Spaghetti Carbonara, Kimchi Noodles), or cook the eggs right in a sauce (Eggs in Purgatory*, Green Shakshuka).
+    <!-- * Shortcut: Skip making your own tomato sauce and use a good jarred sauce. Rao’s Arrabiata is my personal favorite. --></p>
   <section>
     <div class="cooking-method" v-for="technique in techniques" v-bind:key="technique.title">
       <image-custom :imageName="technique.img"></image-custom>
@@ -15,20 +17,20 @@
       <!-- Link to instruction source -->
       <p>
         <small><b>SOURCE:</b></small><br>
-        <a id="content-link" :href="url">{{technique.linkA}}</a>
+        <a id="content-link" :href="technique.linkA" onclick="_blank">{{technique.linkACopy}}</a>
       </p>
 
       <!-- Any additional tips or info -->
       <p>{{technique.contentD}}</p>
       <p>{{technique.contentE}}</p>
       <!-- Link for more info if needed -->
-      <p><a id="content-link" :href="url">{{technique.linkB}}</a></p>
+      <p><a id="content-link" :href="technique.linkB">{{technique.linkBCopy}}</a></p>
 
       <!-- Three suggested recipes for this method -->
       <h4>{{technique.contentF}}</h4>
-      <p><a id="content-link" :href="url">{{technique.linkC}}</a></p>
-      <p><a id="content-link" :href="url">{{technique.linkD}}</a></p>
-      <p><a id="content-link" :href="url">{{technique.linkE}}</a></p>
+      <p><a id="content-link" :href="technique.linkC">{{technique.linkCCopy}}</a></p>
+      <p><a id="content-link" :href="technique.linkD">{{technique.linkDCopy}}</a></p>
+      <p><a id="content-link" :href="technique.linkE">{{technique.linkECopy}}</a></p>
 
     </div>
   </section>
@@ -56,13 +58,18 @@ export default {
           about 2 minutes.",
           contentB: "STEP 2: Gently crack eggs all over and peel, starting from the wider end containing the air pocket.",
           contentC: "DO AHEAD: Eggs can be cooked and peeled 3 days ahead. Transfer to an airtight container and chill.",
+          linkACopy: "Bon Appetit",
           linkA: ('https://www.bonappetit.com/recipe/hard-boiled-eggs'),
           contentD: "TIP: For this method, use eggs that are a little older rather than fresh ones. This will make \
           them much easier to peel without damaging the egg white. You can see more about by visiting the link below.",
+          linkBCopy: "5 Mistakes to Avoid When Making Hard-boiled Eggs",
           linkB: ('https://www.thekitchn.com/5-mistakes-to-avoid-when-making-hard-boiled-eggs-cooking-mistakes-to-avoid-216999'),
           contentF: "RECIPE SUGGESTIONS FOR THIS METHOD",
+          linkCCopy: "Deviled Eggs",
           linkC: ('https://www.epicurious.com/recipes/food/views/deviled-eggs-106562'),
+          linkDCopy: "Scotch Eggs with Mustard Sauce",
           linkD: ('https://www.foodnetwork.com/recipes/robert-irvine/scotch-eggs-with-mustard-sauce-2268828'),
+          linkECopy: "Classic Egg Salad",
           linkE: ('https://www.marthastewart.com/314646/classic-egg-salad')
           },
           {title: "SCRAMBLED",
@@ -162,7 +169,8 @@ section {
   cursor: pointer;
   font-weight: bolder;
   border: none;
-  text-decoration: none;
+  color: $dkgray;
+  text-decoration: underline dotted $yellow;
 }
 
 
