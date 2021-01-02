@@ -71,7 +71,7 @@ h4 {
   font-weight: 600;
   border-top: 1px dotted $dkgray;
   padding-top: 0.5em;
-  margin-top: 2em;
+  margin-top: 3.5em;
 }
 
 .bkgrd-img {
