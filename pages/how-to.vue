@@ -2,13 +2,13 @@
 <div class="row pb-5">
   <h1 class="col-12 pt-5 pb-2">How to Cook an Egg: 4 Methods</h1>
   <p class="lead col-12 pb-5">There are a number of ways you can prepare eggs, but here we look at 4 of the most popular methods.
-    And if you don’t want to cook your eggs separately, you can try one of these recipes that use raw eggs as either part of a sauce (
-    <a id="content-link" href="https://www.marthastewart.com/341240/spaghetti-carbonara" target="_blank">Spaghetti Carbonara</a>,
-    <a id="content-link" href="https://www.bonappetit.com/recipe/kimchi-udon-with-scallions" target="_blank">Kimchi Udon Noodles with Scallions</a>
-    ) or cooks the eggs right in the dish
-    <a id="content-link" href="https://www.nigella.com/recipes/eggs-in-purgatory" target="_blank">Eggs in Purgatory</a>,
-    <a id="content-link" href="https://ottolenghi.co.uk/recipes/braised-eggs-with-leek-and-za-atar" target="_blank">Braised Eggs with Leek and Za'atar</a>
-    ).</p>
+    And if you don’t want to cook your eggs separately, you can try one of these recipes that use raw eggs either as part of a sauce
+    (<a id="content-link" href="https://www.marthastewart.com/341240/spaghetti-carbonara" target="_blank">Spaghetti Carbonara</a>,
+    <a id="content-link" href="https://www.bonappetit.com/recipe/kimchi-udon-with-scallions" target="_blank">Kimchi Udon Noodles with Scallions</a>)
+    or cooks the eggs right in the dish
+    (<a id="content-link" href="https://www.nigella.com/recipes/eggs-in-purgatory" target="_blank">Eggs in Purgatory</a>,
+    <a id="content-link" href="https://ottolenghi.co.uk/recipes/braised-eggs-with-leek-and-za-atar" target="_blank">Braised Eggs with Leek and Za'atar</a>).
+  </p>
   <section>
     <div class="cooking-method" v-for="technique in techniques" v-bind:key="technique.title">
       <image-custom :imageName="technique.img"></image-custom>
@@ -111,12 +111,14 @@ export default {
           linkCCopy: "Croque Madame",
           linkC: ('https://www.marthastewart.com/353224/croque-madame'),
           linkDCopy: "Eggs in a Hole",
-          linkD: ('https://www.foodnetwork.com/recipes/ree-drummond/egg-in-a-hole-recipe-1925587')
+          linkD: ('https://www.foodnetwork.com/recipes/ree-drummond/egg-in-a-hole-recipe-1925587'),
+          linkECopy: "\"Moroccan Guacamole\" Toasts with Fried Egg",
+          linkE: ('https://food52.com/recipes/27425-moroccan-guacamole-toasts-with-fried-egg')
           },
           {title: "POACHED",
           img: 'poached.jpg',
           contentA: "STEP 1: Fill a medium saucepan about 2/3 full with water and bring to a boil over high heat. \
-          Take the water down to a simmer. Turn the heat down and let the water relax into a brisk simmer. You should \
+          Turn the heat down and let the water relax into a brisk simmer. You should \
           see bubbles coming up to the surface, but it won't be rolling. (It's easier and quicker to control the \
           simmer if you bring it to a boil first, then reduce the heat rather than trying to get it to the perfect \
           simmer from the get-go.)",
@@ -146,6 +148,18 @@ export default {
       {id: 4, src: require('../assets/poached.jpg'), alt:'Image of poached eggs'},
       ],
     }
+  },
+  head() {
+  return {
+    title: this.title,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Want more ways to use those eggs in your fridge? Check out these step-by-step instructions for 4 preparation methods, and get recipe suggestions to try with each one.'
+        }
+      ]
+    }
   }
 }
 </script>
@@ -174,7 +188,7 @@ section {
 
 
 /* Adding a media query for mobile */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 480px) {
   section {
     flex-flow: column wrap;
     flex: 80%;

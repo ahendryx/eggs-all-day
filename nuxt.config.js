@@ -1,11 +1,11 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'eggs-all-day',
+    titleTemplate: '%s - Nuxt.js',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Want more ways to use those eggs in your fridge? Learn 4 basic cooking methods, get recipe ideas and find out if the label on your carton means what you think it does.'}
     ],
     link: [
       { rel: 'stylesheet',

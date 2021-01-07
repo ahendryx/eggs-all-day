@@ -34,10 +34,6 @@ export default {
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   font-family: 'Barlow', sans-serif;
   font-family: 'Barlow Condensed', sans-serif;
@@ -74,33 +70,6 @@ h4 {
   margin-top: 3.5em;
 }
 
-.bkgrd-img {
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.intro-title {
-  position: absolute;
-  width: 40%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  p {
-    font-size: 1.3em;
-    line-height: 1.4em;
-    margin-top: 0.2em;
-    padding-left: 0.2em;
-  }
-}
-
-.intro-secondary {
-  font-family: 'Barlow', sans-serif;
-  font-size: 1.2em;
-  padding: 0 0 2.3em 0;
-}
-
 p {
   font-family: 'Barlow', sans-serif;
   font-size: 0.9em;
@@ -113,5 +82,6 @@ footer {
   padding: 1em 0 1em 0em;
   margin-top: 3em;
 }
+
 
 </style>

@@ -13,10 +13,6 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   font-family: 'Barlow', sans-serif;
   font-family: 'Barlow Condensed', sans-serif;
@@ -99,11 +95,3 @@ footer {
   padding: 1em 0 1em 0em;
   margin-top: 3em;
 }
-
-/* Shifting nav to left side when in mobile view
-@media screen and (max-width: 576px) {
-  ul {
-    margin: 0.5em 0 0 0;
-  }
-}
-*/

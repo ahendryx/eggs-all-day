@@ -38,6 +38,18 @@ export default {
       this.errored = true
     })
     .finally(() => this.loading = false)
+  },
+  head() {
+  return {
+    title: this.title,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Eggs are good for more than just breakfast. Get some new ideas about how to use them from this collection of recipes, with nutrition data provided.'
+        }
+      ]
+    }
   }
 }
 
