@@ -59,7 +59,7 @@ a:hover {
   #nav a {
     font-size: 1em;
     padding: 0.5em 0em 0.5em 0.8em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
     text-align: left;
     cursor: pointer;
     text-decoration: none;

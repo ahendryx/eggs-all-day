@@ -1,8 +1,8 @@
 <template>
- <article class="card">
-	 <img :src="recipe.image" :alt="recipe.name" class="card__img" width=100%>
-	 <a :href="recipe.link" target="_blank"><h2 class="card__title">{{ recipe.name }}</h2></a>
-    <div class="card__info">
+ <article class="cards">
+	 <img :src="recipe.image" :alt="recipe.name" class="cards__img" width=100%>
+	 <a :href="recipe.link" target="_blank"><h2 class="cards__title">{{ recipe.name }}</h2></a>
+    <div class="cards__info">
       <p v-if="show">Click the whisk to preview nutrition information.</p>
       <p v-else>{{recipe.dataPoints[1].value + ', ' + recipe.dataPoints[2].value + ', ' +
          recipe.dataPoints[3].value + ', ' + recipe.dataPoints[4].value}}</p>
@@ -31,7 +31,7 @@ export default {
 
 @import '../assets/css/settings.variables';
 
-.card {
+.cards {
 	border: 2px solid $ltgray;
   background-color: #fff;
   max-width: 300px;
@@ -53,7 +53,8 @@ export default {
 	}
 	&__title {
 		font-size: 1.2rem;
-		margin-bottom: 2rem;
+		margin-bottom: 0.1rem;
+    padding-left: 0.5em;
 	}
   &__info {
     font-size: 0.7em;
