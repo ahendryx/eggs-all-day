@@ -25,7 +25,7 @@
   position: absolute;
   width: 45%;
   top: 55%;
-  left: 55%;
+  left: 50%;
   transform: translate(-50%, -50%);
   p {
     font-size: 1.3em;
@@ -46,7 +46,6 @@
   width: 800px;
   left: 0;
   overflow: hidden;
-  opacity: 65%;
 }
 
 .intro-title {
