@@ -17,7 +17,7 @@ In addition to the video, I discovered some tips in the blog that was recommende
 best keywords for your site (creating a "keyword theme"), as well as how to include
 them in some of your more prominent content, to be very useful. There are even
 suggestions about how to conduct research for keyword selection –— such as trying
-to determine what results are currently returned with certain keywords -– and
+to determine what results are currently returned with certain keywords –— and
 a mention of some resources to help you do that. I feel that this introduction to
 SEO has helped me understand how different elements of a site can be used to
 increase its visibility, and that SEO is something that can be considered during
