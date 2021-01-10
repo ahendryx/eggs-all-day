@@ -1,5 +1,5 @@
 # LESSON 10:
-# Summary and Proposal
+### Summary and Proposal
 
 
 
@@ -24,8 +24,7 @@ increase its visibility, and that SEO is something that can be considered during
 the site creation process rather than at the end.
 
 
-### SEO PROPOSAL:
-### eggsallday.com
+### SEO PROPOSAL: eggsallday.com
 
 After reading that including keywords in your site's content (title tags, H1 tags,
 sub-headers, page copy, etc.) helps your site get discovered in a search, I would
